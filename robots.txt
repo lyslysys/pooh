@@ -1,0 +1,24 @@
+
+파일명: robots.txt
+
+검색로봇에게 사이트나 웹페이지를 수집할 수 있도록 허용/제한
+(상위 폴더 안에 위치시키기)
+
+- 검색엔진 로봇 모두 수집 허용
+User-agent: *
+Allow: /
+
+- 네이버에서만 검색로봇 허용
+**** google : Googlebot , daum : Daumoa (Yeti 자리에 넣기) 
+User-agent: *
+Disallow : /
+User-agent : Yeti
+Allow: /
+
+- 관리자 페이지나 개인정보 페이지는 수집허용 X
+User-agent : Yeti
+Disallow : /private*/
+
+- 모든 로봇 차단
+User-agent : *
+Disallow : /
